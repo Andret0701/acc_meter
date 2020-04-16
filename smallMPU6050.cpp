@@ -49,7 +49,7 @@ MPU6050::MPU6050() : debugSerial(USBTX, USBRX)
 {
 
     devAddr = MPU6050_DEFAULT_ADDRESS;
-
+    initialize();
 }
 
 /** Specific address constructor.
@@ -62,7 +62,7 @@ MPU6050::MPU6050(uint8_t address) : debugSerial(USBTX, USBRX)
 {
     
     devAddr = address;
-
+    initialize();
 }
 
 /** Power on and prepare for general usage.
